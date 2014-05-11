@@ -1,7 +1,7 @@
 {
   "name": "goodreads.js",
   "description": "Goodreads API wrapper for NodeJS",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "author": "Jason Kulatunga <jason@thesparktree.com> (http://www.thesparktree.com)",
   "repository": {
     "type": "git",
