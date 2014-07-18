@@ -1,6 +1,6 @@
 (function() {
     var Q = require('q')
-    , goodreads = require('../main.js')
+    , goodreads = require('../lib/main.js')
     , http = require('http')
     , url = require('url')
     var readline = require('readline')
@@ -16,7 +16,7 @@
     })
     provider.CreateClient()
         .then(function(client){
-            return client.SearchForBookTitleAuthor( "Imager","L.E. Modesitt Jr.")
+            return client.SearchBooks( "Empire of Light - Gary Gibson")
         })
         .then(function(data){
             console.log("FINISHED")
