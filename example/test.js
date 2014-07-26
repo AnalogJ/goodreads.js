@@ -16,7 +16,7 @@
     })
     provider.CreateClient()
         .then(function(client){
-            return client.SearchBooks( "Empire of Light - Gary Gibson")
+            return client.SeriesByAuthor("1301649")
         })
         .then(function(data){
             console.log("FINISHED")
