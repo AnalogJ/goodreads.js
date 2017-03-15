@@ -17,8 +17,17 @@
     "node.extend": "^1.0.10",
     "request": "^2.34.0"
   },
+  "devDependencies": {
+    "mocha": "^3.2.0",
+    "nock": "^9.0.9",
+    "sanitize-filename": "^1.6.1",
+    "should": "^11.2.1"
+  },
   "main": "./lib/main",
   "engines": {
     "node": "*"
+  },
+  "scripts": {
+    "test": "mocha --recursive"
   }
 }

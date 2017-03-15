@@ -1,0 +1,30 @@
+[
+    {
+        "scope": "https://www.goodreads.com:443",
+        "method": "GET",
+        "path": "/book/review_counts.xml?isbns=0765348276&key=PLACEHOLDER_CLIENT_KEY&utf8=%E2%9C%93",
+        "body": "",
+        "status": 406,
+        "response": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<hash>\n  <status>406</status>\n  <error>Not Acceptable</error>\n</hash>\n",
+        "rawHeaders": [
+            "Server",
+            "Server",
+            "Date",
+            "Wed, 15 Mar 2017 07:21:58 GMT",
+            "Content-Type",
+            "application/xml; charset=utf-8",
+            "Content-Length",
+            "109",
+            "Connection",
+            "keep-alive",
+            "Status",
+            "406 Not Acceptable",
+            "X-Request-Id",
+            "ZX3XW76GXGY8K3BCC4HX",
+            "X-Runtime",
+            "0.029110",
+            "Vary",
+            "Accept-Encoding,User-Agent"
+        ]
+    }
+]
