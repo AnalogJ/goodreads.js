@@ -1,6 +1,6 @@
 {
   "name": "goodreads.js",
-  "version": "0.0.8",
+  "version": "0.0.9",
   "dependencies": {
     "ajv": {
       "version": "4.11.5",
