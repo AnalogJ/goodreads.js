@@ -26,7 +26,7 @@
             "X-Content-Type-Options",
             "nosniff",
             "Location",
-            "https://www.goodreads.com/group/show/8095-goodreads-developers.xml?key=VEjXc5XWMAeIJYoHlqZK8w&utf8=%E2%9C%93",
+            "https://www.goodreads.com/group/show/8095-goodreads-developers.xml?key=PLACEHOLDER_CLIENT_KEY&utf8=%E2%9C%93",
             "X-Request-Id",
             "1V24T7NYEPM40XM995S1",
             "Cache-Control",
