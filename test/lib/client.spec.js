@@ -150,6 +150,88 @@ describe('#client', function() {
                     .then(done, done)
             });
         });
+
+        describe('ReviewShowByUserAndBook()', function() {
+            it('should correctly respond with recent reviews', function(done) {
+                client.ReviewShowByUserAndBook(1, 50)
+                    .then(function(data){
+                        data.GoodreadsResponse.review.should.be.a.List
+                    })
+                    .then(done, done)
+            });
+        });
+
+        describe('SearchGroup()', function() {
+            it('should correctly respond with search results', function(done) {
+                client.SearchGroup('adventure')
+                    .then(function(data){
+                        data.GoodreadsResponse.groups[0].list.should.be.a.List
+                    })
+                    .then(done, done)
+            });
+        });
+
+        describe('SearchAuthorByName()', function() {
+            it('should correctly respond with search results', function(done) {
+                client.SearchAuthorByName('Orson Scott Card')
+                    .then(function(data){
+                        data.GoodreadsResponse.author[0].name[0].should.be.eql('Orson Scott Card')
+                    })
+                    .then(done, done)
+            });
+        });
+
+        describe('SearchBooks()', function() {
+            it('should correctly respond with search results', function(done) {
+                client.SearchBooks('Ender\'s Game')
+                    .then(function(data){
+                        data.GoodreadsResponse.search[0].results.should.be.a.List
+                    })
+                    .then(done, done)
+            });
+        });
+
+        describe('SeriesShow()', function() {
+            it('should correctly respond with search results', function(done) {
+                client.SeriesShow('40321-drina')
+                    .then(function(data){
+                        console.dir(data.GoodreadsResponse)
+                        data.GoodreadsResponse.series[0].title[0].trim().should.be.eql('Drina')
+                    })
+                    .then(done, done)
+            });
+        });
+
+        describe('SeriesShow()', function() {
+            it('should correctly respond with series data', function(done) {
+                client.SeriesShow('40321-drina')
+                    .then(function(data){
+                        data.GoodreadsResponse.series[0].title[0].trim().should.be.eql('Drina')
+                    })
+                    .then(done, done)
+            });
+        });
+
+        describe('SeriesByAuthor()', function() {
+            it('should correctly respond with series data', function(done) {
+                client.SeriesByAuthor('227840')
+                    .then(function(data){
+                        data.GoodreadsResponse.series_works[0].series_work[0].id[0].should.be.eql('331195')
+                    })
+                    .then(done, done)
+            });
+        });
+
+        describe('SeriesByBook()', function() {
+            it('should correctly respond with series data', function(done) {
+                client.SeriesByBook('118-drina-ballerina')
+                    .then(function(data){
+                        console.dir(data.GoodreadsResponse.series_works[0].series_work[0])
+                        data.GoodreadsResponse.series_works[0].series_work[0].id[0].should.be.eql('144392')
+                    })
+                    .then(done, done)
+            });
+        });
     })
 
 
