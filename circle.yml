@@ -1,0 +1,18 @@
+machine:
+  node:
+    version: 4.2.6
+
+general:
+  branches:
+    only:
+      - master
+      - beta
+
+dependencies:
+  override:
+    - npm install
+    - npm ls
+
+test:
+  override:
+    - npm test
