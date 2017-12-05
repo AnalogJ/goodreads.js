@@ -1,6 +1,30 @@
 goodreads.js
 ============
 
+### install
+```
+npm i goodreads.js --save
+```
+
+### usage
+```js
+let goodreads = require('goodreads.js')
+
+const auth = new goodreads.provider({ client_key: '*', client_secret: '*' })
+
+auth.CreateClient()
+.then(client => {
+  client.SearchBooks('crime and punishment').then(response => {
+    const { results } = response.GoodreadsResponse.search[0]
+    const { work } = results[0]
+
+    for (let { best_book } of work) {
+      console.log(best_book)
+    }
+  })
+})
+```
+
 GoodReads NodeJS API
 
 # Public/Unauthenticated API's
